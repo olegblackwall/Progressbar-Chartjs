@@ -1,4 +1,4 @@
-# Frontend Pet-Project
+# Frontend Project
 
 Проект представляет собой SPA-приложение, разработанное на Vue3 (**Composition API**)
 
