@@ -11,41 +11,35 @@
         <label class="test-input__label">{{ input_label }}</label>
     </div>
 </template>
-<script lang="ts">
-import { defineComponent, reactive, watch } from 'vue'
+<script lang="ts" setup>
+import { defineProps, defineEmits, reactive, watch } from 'vue'
 
-export default defineComponent({
-    props: {
-        input_type: {
-            type: String,
-            default: 'text'
-        },
-        input_value: {
-            type: String,
-            default: ''
-        },
-        input_label: {
-            type: String,
-            default: 'label'
-        }
+const props = defineProps({
+    input_type: {
+        type: String,
+        default: 'text'
     },
-    setup(props, { emit }) {
-        const input_field_value = reactive({
-            value: props.input_value
-        })
-        
-        watch(() => props.input_value, (new_value) => {
-            input_field_value.value = new_value
-        })
-
-        const setValue = () => {
-            emit('set_value', {value: input_field_value.value, type: props.input_type})
-        }
-
-        return {
-            input_field_value,
-            setValue
-        }
+    input_value: {
+        type: String,
+        default: ''
     },
+    input_label: {
+        type: String,
+        default: 'label'
+    }
 })
+
+const emit = defineEmits(['set_value'])
+
+const input_field_value = reactive({
+    value: props.input_value
+})
+
+watch(() => props.input_value, (new_value) => {
+    input_field_value.value = new_value
+})
+
+const setValue = () => {
+    emit('set_value', {value: input_field_value.value, type: props.input_type})
+}
 </script>
