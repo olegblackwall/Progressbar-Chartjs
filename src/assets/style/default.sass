@@ -1,0 +1,46 @@
+body 
+    background-color: $background-main
+    overflow-x: hidden
+    margin: 0 !important
+
+span, p, a, h1, h2, h3, h4, h5, h6, li, ul, input
+    font-style: normal
+    font-weight: 400
+    line-height: normal    
+
+button, span, p, input, label, a, ul, li, ol
+    font-family: 'Inter'
+
+a 
+    cursor: pointer    
+
+label 
+    pointer-events: none
+
+span 
+    display: inline-block
+
+h1, h2,h3, h3, h5, h6
+    font-family: 'Inter'
+
+.test
+    max-width: 1196px 
+    width: 100%
+    margin: 0 auto
+    overflow-x: hidden
+    position: relative
+    @media screen and (max-width: 1279px)
+        width: calc(100% - 96px)
+
+    &__container 
+        height: fit-content
+        position: relative
+
+    &__link 
+        color: $white 
+        transition: color .2s
+        cursor: pointer
+        font-size: 16px
+        font-family: 'Inter'
+        &:hover 
+            color: $hover-link

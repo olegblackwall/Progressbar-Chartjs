@@ -1,0 +1,40 @@
+.main-page
+    padding: 96px 192px
+    background-color: $background-main-page
+    border-radius: 12px
+    min-height: 828px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__progressbar-background
+        position: relative
+        width: fit-content
+        height: fit-content
+        padding: 16px
+        border-radius: 8px
+        background-color: $white
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5)
+
+    &__dashboard
+        display: flex
+        flex-direction: column
+        gap: 15px
+        width: 100%
+        height: fit-content
+        padding: 16px
+        border-radius: 8px
+        background-color: $white
+        box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5)
+        &__status
+            &__btn
+                border-radius: 8px
+
+        &__title
+            display: flex
+            justify-content: center
+
+    &__dashboard-wrapper
+        display: flex
+        flex-direction: column
+        gap: 36px
+        place-items: center

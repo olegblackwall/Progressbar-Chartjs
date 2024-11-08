@@ -1,0 +1,65 @@
+.test-btn
+    display: flex 
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: background .2s
+    &:hover 
+        background-color: $hover-primary
+
+    &:active 
+        background-color: $pressed-primary
+
+    &__text 
+        color: $white
+        font-size: 16px
+
+    &._primary 
+        background-color: $default-primary
+        padding: 18px
+        gap: 10px
+        display: flex 
+        align-items: center
+        justify-content: center
+
+        &:hover 
+            background-color: $hover-primary 
+
+        &:active 
+            background-color: $pressed-primary
+
+    &._warning
+        background-color: $warning-color
+        padding: 18px
+        gap: 10px
+        display: flex 
+        align-items: center
+        justify-content: center
+        &:hover
+            background-color: $warning-hover
+        &:active
+            background-color: $warning-active
+
+    &._error
+        background-color: $error-color
+        padding: 18px
+        gap: 10px
+        display: flex 
+        align-items: center
+        justify-content: center
+        &:hover
+            background-color: $error-hover
+        &:active
+            background-color: $error-active
+
+    &._success
+        background-color: $success-color
+        padding: 18px
+        gap: 10px
+        display: flex 
+        align-items: center
+        justify-content: center
+        &:hover
+            background-color: $success-hover
+        &:active
+            background-color: $success-active

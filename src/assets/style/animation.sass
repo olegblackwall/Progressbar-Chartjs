@@ -1,0 +1,28 @@
+.fadeHeight-enter-active
+    transition: max-height 1.6s, opacity .2s
+    overflow: hidden
+
+.fadeHeight-enter-from
+    max-height: 0
+    opacity: 0
+    transition: max-height 1.6s, opacity .2s
+    
+.fadeHeight-leave-active,
+.fadeHeight-enter-to
+    transition: max-height 1.6s, opacity .2s
+    max-height: 2000px
+    overflow: hidden
+
+
+.fadeHeight-leave-to, .fadeHeight-enter
+    transition: max-height 0.3s, opacity .2s
+    pointer-events: none
+    max-height: 0
+    opacity: 0
+    overflow: hidden
+
+.fade-enter-active, .fade-leave-active
+    transition: opacity .4s
+
+.fade-enter, .fade-leave-to
+    opacity: 0
